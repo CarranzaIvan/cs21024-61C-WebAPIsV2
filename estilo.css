@@ -1,0 +1,481 @@
+/*Iván Alexander Carranza Sánchez*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+img {width:3cm;height:3cm;}
+table {width:80%;margin:auto;}
+th#price {cursor:pointer;}
+li {color:rgb(255, 0, 0);}
+
+/*si chequea muestra los productos sin cheque desaparecen los productos*/
+input#c1:checked ~ table tbody tr.c1 { display: table-row; }
+input#c1:not(checked) ~ table tbody tr.c1 { display: none; }
+input#c2:checked ~ table tbody tr.c2 { display: table-row; }
+input#c2:not(checked) ~ table tbody tr.c2 { display: none; }
+input#c3:checked ~ table tbody tr.c3 { display: table-row; }
+input#c3:not(checked) ~ table tbody tr.c3 { display: none; }
+input#c4:checked ~  table tbody tr.c4 { display: table-row; }
+input#c4:not(checked) ~ table tbody tr.c4 { display: none; }
+
+/*CABECERA-----------------------------------*/
+/*Enlace del navbar*/
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: initial;
+}
+
+/*Tamaño de Imagen */
+.logotipo {
+  width: 130px; /* Establece el ancho deseado en píxeles */
+  height: auto; /* Deja que la altura se ajuste automáticamente para mantener la proporción original */
+  margin-left: 20px;
+}
+
+/*Desplazamiento del titulo */
+.EmpresaName 
+{
+  padding-top: 40px;
+  margin-left: 30px;
+}
+
+/*Estilo del titulo */
+.Titulo
+{
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: aliceblue;
+  font-size: 28px; 
+}
+
+/*Color a la Cabecera */
+.Sec-Cabecera
+{
+  background-color: #066ecf;/* Color de fondo del navbar */
+  top: 0;
+
+}
+
+/*Llenado de cabecera */
+.BarraPrincipal {
+    list-style: none;
+    display: flex;
+}
+
+/*Sin Margen*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+
+/*CUERPO-----------------------------------*/
+/*Letra Estilo*/
+.Cuerpo 
+{
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*Productos mover tabla*/
+.productos
+{
+  padding-top: 20px;
+  margin-left: 10px;
+}
+
+/*Alineación foto de perfil*/
+.perfil{
+  border-radius: 50%;
+  width: 135px;
+  height: 160px;
+  margin-left: 30px;
+}
+
+/*Alineación información personal*/
+.InfPaf {
+  padding-top: 5px;
+  width: 3000px;
+  margin-left: 175px;
+}
+
+/*Alineación información personal*/
+.DatosPer {
+  margin-left: 10px;
+}
+
+/*Alineación fondo de información*/
+.Personal{
+  background-color: #9c9f9f;/* Color de fondo del navbar */
+  top: 0;
+  height: 225px; 
+}
+
+/*Boton de activar tabla*/
+.boton {
+  background-color: #1d8be6; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+}
+.boton:hover {
+  background-color: #0714fe; 
+  color: white;
+}
+
+/*TABLAS-----------------------------------*/
+/* Tabla encabezados */
+.tabla th{
+  padding:6px 10px;
+  text-transform:uppercase;
+  color:#000000;
+  font-weight:bold;
+  text-shadow:1px 1px 1px #fff;
+  border-bottom:5px solid #444;
+}
+
+/*Borde de tabla*/
+table.tabla{
+  border-collapse:collapse;
+}
+
+/*Color a encabezado*/
+.tabla thead,
+.tabla tfoot{
+  background-color: #7FD2FF;
+}
+
+/*Color a columna 4*/
+.tabla tbody td:nth-child(4){
+  background-color:#444;
+  color:#000000;
+  border-bottom:1px solid #444;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.39, rgb(189,189,189)),
+      color-stop(0.7, rgb(224,224,224))
+      );
+  background:-moz-linear-gradient(
+      center bottom,
+      rgb(189,189,189) 39%,
+      rgb(224,224,224) 70%
+      );
+  text-shadow:1px 1px 1px #fff;
+}
+
+/*Color a columna 6*/
+.tabla tbody td:nth-child(6){
+  background-color:#444;
+  color:#000000;
+  border-bottom:1px solid #444;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.39, rgb(189,189,189)),
+      color-stop(0.7, rgb(224,224,224))
+      );
+  background:-moz-linear-gradient(
+      center bottom,
+      rgb(189,189,189) 39%,
+      rgb(224,224,224) 70%
+      );
+  text-shadow:1px 1px 1px #fff;
+}
+
+/*Color a columna impares*/
+.tabla tbody td:nth-child(odd){
+  background-color:#555;
+  color:#f0f0f0;
+  border-bottom:1px solid #444;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.39, rgb(85,85,85)),
+      color-stop(0.7, rgb(105,105,105))
+      );
+  background:-moz-linear-gradient(
+      center bottom,
+      rgb(85,85,85) 39%,
+      rgb(105,105,105) 70%
+      );
+  text-shadow:1px 1px 1px #000;
+}
+
+/*Color a columna 2*/
+.tabla tbody td:nth-child(2){
+  background-color:#fbfbfb;
+  color:#000000;
+  border-bottom:1px solid #ffffff;
+  background:-webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.39, rgb(255, 255, 255)),
+      color-stop(0.7, rgb(255, 255, 255))
+      );
+  background:-moz-linear-gradient(
+      center bottom,
+      rgb(189,189,189) 39%,
+      rgb(224,224,224) 70%
+      );
+  text-shadow:1px 1px 1px #fff;
+}
+
+/* Estilos para las celdas (centrado) */
+.tabla th, .tabla td {
+  padding: 8px; /* Añade espaciado interno a las celdas */
+  text-align: center; /* Centra el texto horizontalmente */
+  vertical-align: middle; /* Centra el texto verticalmente */
+}
+
+/*Ajustes a tabla */
+.tabla tbody th{
+  color:#696969;
+  text-align:right;
+  padding:0px 10px;
+  border-right:1px solid #aaa;
+}
+
+/*Numero ID tamaño */
+.tabla tbody td:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*Numero precio tamaño */
+.tabla tbody td:nth-child(3) {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*Texto fuera */
+.formulario {
+  font-family: "Arial", sans-serif;
+  color: #ffffff; 
+  font-size: 15px;
+}
+
+/*Modificacion de checkbox */
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: rgb(3, 97, 248);
+  border-color: rgb(16, 3, 254);
+  color: #fff;
+}
+
+/*Ajuste de circulo de carga*/
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: 1s all;
+  opacity: 0;
+}
+.loading.show {
+  opacity: 1;
+}
+.loading .spin {
+  border: 3px solid hsla(185, 100%, 62%, 0.2);
+  border-top-color: #3cefff;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+to {
+  transform: rotate(360deg);
+}
+}         
+
+/*Formulario*/
+.container {
+	max-width:350px;
+  width: 400px;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="url"], 
+#contact input[type="number"], 
+#contact input[type="text"], 
+#contact select,
+#contact textarea{ font:400 12px/16px "Arial", sans-serif; }
+
+#contact {
+	background:#aba9a9;
+	padding:35px;
+	margin:5px 0;
+}
+
+#contact h3 {
+	color: rgb(0, 0, 0);
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+  font-family: Impact, Arial, sans-serif;
+}
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="url"], 
+#contact input[type="number"], 
+#contact input[type="text"], 
+#contact select,
+#contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+#contact input[type="url"]:hover, 
+#contact input[type="number"]:hover, 
+#contact input[type="text"]:hover, 
+#contact select:hover,
+#contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:3px solid #f67a06;
+}
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+#contact button {
+	background-color: #1d8be6; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+}
+
+#contact button:hover {
+	background:rgb(44, 0, 204);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+/*Boton de tabla eliminar*/
+.tabla button[class="eliminar"]{
+	background-color: #eb0707; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+}
+
+.tabla button[class="eliminar"]:hover {
+	background:rgb(251, 3, 160);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+.tabla button[class="eliminar"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+
+/*Boton de tabla eliminar*/
+.tabla button[class="actualizar"]{
+	background-color: #02521f; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+}
+
+.tabla button[class="actualizar"]:hover {
+	background:rgb(74, 229, 66);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+.tabla button[class="actualizar"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Tienda De Articulos</title>
+	<meta charset="utf-8"  />
+	<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="codigo.js"></script>
+	<meta name="keywords" content="APIs, UES, FIA, JS, Tecnicas de Programación en Internet, Tienda de Ropa, Tienda de articulos" />	
+	<meta name="description" content="Guia 61 B: Uso de APIs" />
+	<meta name="author" content="Iván Alexander Carranza Sánchez"/>
+	<meta name="carne" content="CS21024"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body >
+	<div class="loading show">
+		<div class="spin"></div>
+	</div>
+	
+	<div class="centro">
+	<!-- Cabecera -->
+	<header class="Sec-Cabecera">
+		<div class="contenedor">
+			<nav class="BarraPrincipal">
+				<div class="logo">
+					<a class="enlace-inicio" href="index.html">
+						<img class= "logotipo" src="RecursosImagenes/Artitresures.png">
+				</div>
+			  	<div class="EmpresaName">
+					<span class="Titulo">
+						 ARTITRESURES: SE VENDE DE TODO
+					</span>
+				</div>
+			  </a>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Información -->
+	<div class="Cuerpo">
+
+		<!-- Datos personales-->
+		<div class="Personal">
+			<div class="DatosPer">
+				<h1>Información Personal</h1>
+				<!--AGREGADO DE IMAGEN -->
+				<img class= "perfil" src="RecursosImagenes/Perfil_UES.jpg" align="LEFT" ALT="foto personal">
+
+  			<!--AGREGADO DE DATOS PERSONALES-->
+				<div class="InfPaf">
+					<p class="Parrafo">
+						<b> Nombre:</b> Iv&aacute;n Alexander Carranza S&aacute;nchez<br>
+						<b> Carn&eacute;:</b> CS21024<br>
+						<b> Correo:</b> <a href="mailto:cs21024@ues.edu.sv">cs21024@ues.edu.sv</a><br>
+						<b> Grupo de trabajo:</b> 01<br>
+						<b> Catedratico:</b> Balmore Ortiz<br>
+						<b> Materia:</b> Tecnicas de Programación en Internet<br>
+						<b> Codigo de Asignatura:</b> TPI115<br>
+			  		</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="productos">
+			<!--Boton de cargar-->
+			<p> <button class ="boton" onclick="obtenerProductos();this.style.display='none';"><b>Obtener Productos</b></button> </p>
+			
+			
+			<div id="listado" style="display:none;">
+				<!--Formulario-->
+				<div class="container">  
+					<form id="contact">
+					<h3>Edición Tabla</h3>
+
+					  <fieldset>
+						<input id= "imagenIn" placeholder="Enlace de Foto" type="url" tabindex="1" required autofocus>
+					  </fieldset>
+
+					  <fieldset>
+						<input id= "precioIn" placeholder="Precio" type="number" min= "0" tabindex="2" step="any" required>
+					  </fieldset>
+
+					  <fieldset>
+						<input id= "tituloIn" placeholder="Titulo" type="text" tabindex="3" required>
+					  </fieldset>
+
+					  <fieldset>
+						<input id= "descripcionIn" placeholder="Descripción" type="text" tabindex="4" required>
+					  </fieldset>
+
+					  <fieldset>
+					  	<select id= "tipoIn"required>
+						<option value="caballeros">caballeros</option>
+						<option value="damas">damas</option>
+						<option value="joyeria">joyeria</option> 
+						<option value="electronicos">electronicos</option> 
+						</select>
+					  </fieldset>
+
+					  <button class ="aceptar" id ="aceptar" onclick="return guardarProducto();"><b>Aceptar</b></button>
+					</form>
+				</div>
+
+				<!--Check-Boxes-->
+				<form class="formulario" name="filtroprods" id="filtroprods">
+					Seleccione Categorias 
+					<input type="checkbox" id="c1" value="c1" checked><label for="c1"><b>Electronicos</b></label>
+					
+					<input type="checkbox" id="c2" value="c2" checked><label for="c2"><b>Joyería</b></label>
+
+					<input type="checkbox" id="c3" value="c3" checked><label for="c3"><b>Ropa Caballero</b></label>
+
+					<input type="checkbox" id="c4" value="c4" checked><label for="c4"><b>Ropa Dama</b></label>
+
+					<b>
+						<ol><li>Click en la imagen para Acercamiento</li>
+							<li>Click en precio para ordenar Asc o Desc</li></ol>
+					</b>
+					
+					<!-- Tabla-->
+					<table id="tabla" class="tabla" border="1">
+						<thead>
+							<tr>
+								<th id="identificador">ID</th>
+								<th>Foto</th>
+								<th id="price">Precio</th>
+								<th>Titulo</th>
+								<th id="des">Descripción</th>
+								<th>Categorias</th>
+								<th>Botones Eliminar</th>
+								<th>Botones Actualizar</th>
+							</tr>
+						</thead>
+						<tbody id="tbody"></tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
